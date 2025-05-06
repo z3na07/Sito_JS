@@ -1,33 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTools - Carrello</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+    .cart-table {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+    }
+    .cart-table th,
+    .cart-table td {
+      vertical-align: middle;
+    }
+    .footer {
+      background-color: #111;
+    }
+    .btn-checkout {
+      background-color: #28a745;
+      border: none;
+    }
+    .btn-checkout:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Carrello -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Il tuo Carrello</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card product-card text-white mb-3">
-          <div class="card-body d-flex align-items-center">
-            <img src="https://cdn.sparkfun.com//assets/parts/1/2/4/4/0/16442-Raspberry_Pi_4_Model_B_-_2GB.jpg" class="img-fluid rounded" style="width: 120px;" alt="Raspberry">
-            <div class="ms-4 flex-grow-1">
-              <h5 class="card-title">Raspberry Pi 4</h5>
-              <p class="mb-1">2GB RAM, 4xUSB, HDMI</p>
-              <small class="text-muted">Quantità:
-                <input type="number" value="1" class="form-control d-inline w-auto ms-2" min="1">
-              </small>
-            </div>
-            <div>
-              <strong>$90</strong>
-              <button class="btn btn-sm btn-danger ms-3">Rimuovi</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Totale -->
-        <div class="text-end mt-4">
-          <h4>Totale: <span class="text-success">$90</span></h4>
-          <a href="#" class="btn btn-outline-light mt-2">Procedi al pagamento</a>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">HTools</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Prodotti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Carrello</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
+
+  <!-- Carrello -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Il tuo carrello</h2>
+
+      <div class="table-responsive">
+        <table class="table table-dark cart-table">
+          <thead>
+            <tr>
+              <th>Prodotto</th>
+              <th>Prezzo</th>
+              <th>Quantità</th>
+              <th>Totale</th>
+              <th>Azioni</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flipper Zero</td>
+              <td>€169</td>
+              <td><input type="number" value="1" min="1" class="form-control bg-dark text-white border-secondary" style="width: 80px;" /></td>
+              <td>€169</td>
+              <td><button class="btn btn-sm btn-danger">Rimuovi</button></td>
+            </tr>
+            <tr>
+              <td>WiFi Pineapple</td>
+              <td>€119</td>
+              <td><input type="number" value="1" min="1" class="form-control bg-dark text-white border-secondary" style="width: 80px;" /></td>
+              <td>€119</td>
+              <td><button class="btn btn-sm btn-danger">Rimuovi</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <h4>Totale: <span class="text-success">€288</span></h4>
+        <button class="btn btn-checkout btn-lg text-white">Procedi al pagamento</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center text-white py-4">
+    <div class="container">
+      <p>&copy; 2025 HTools - Tutti i diritti riservati.</p>
+      <small>Per uso legale ed etico solo. Sii un hacker responsabile.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
