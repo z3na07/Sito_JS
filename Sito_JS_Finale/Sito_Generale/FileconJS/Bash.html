@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Bash Bunny - HTools</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+    .product-detail {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 30px;
+    }
+    .form-select, .form-control {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+    .form-select:focus, .form-control:focus {
+      border-color: #0f0;
+      box-shadow: 0 0 5px #0f0;
+    }
+    .btn-dark {
+      background-color: #000;
+      border-color: #333a;
+    }
+    .btn-dark:hover {
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div ,="" class="container" id="nav">
+<a class="navbar-brand" href="sito.html">HTools</a>
+<button class="navbar-toggler" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="sito.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="carrello.html">Carrello</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Product Detail -->
+<section class="py-5">
+<div ,="" class="container" id="Detail">
+<div class="product-detail mx-auto col-md-6">
+<img alt="Bash Bunny" class="img-fluid mb-3" src="..\File.JPG\bash.webp" style="width: 100%; max-width: 500px;"/>
+<h2>Bash Bunny</h2>
+<span class="badge bg-success mb-2">Hacking Tools</span>
+<h3>€119.99</h3>
+<p class="mb-4">Il Bash Bunny è uno strumento di attacco automatizzato plug-and-play progettato per testare la sicurezza di computer e sistemi tramite l’interfaccia USB. Emula tastiere, Ethernet, seriali e altro per eseguire exploit in pochi secondi.</p>
+<button class="btn btn-dark w-100" onclick="AggiungiAlCarrello(this)">Acquista</button>
+<!-- FAQ Accordion -->
+<div class="accordion mt-4" id="faq">
+<div class="accordion-item bg-dark border-dark">
+<h2 class="accordion-header" id="headingOne">
+<button class="accordion-button collapsed bg-dark text-white" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+              A cosa serve il Bash Bunny?
+            </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#faq" id="collapseOne">
+<div class="accordion-body text-white">
+              Il Bash Bunny viene utilizzato per simulare dispositivi USB affidabili e iniettare comandi preprogrammati su sistemi target. Perfetto per test di sicurezza in scenari reali.
+            </div>
+</div>
+</div>
+<div class="accordion-item bg-dark border-dark mt-2">
+<h2 class="accordion-header" id="headingTwo">
+<button class="accordion-button collapsed bg-dark text-white" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">
+              È adatto ai principianti?
+            </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#faq" id="collapseTwo">
+<div class="accordion-body text-white">
+              Sì, ha una community molto attiva e payload pronti all’uso. Tuttavia, una conoscenza base di scripting Bash e sicurezza informatica è consigliata per sfruttarlo al meglio.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script></body>
+</html>
